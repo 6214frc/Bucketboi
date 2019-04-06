@@ -23,7 +23,7 @@ class Robot : public frc::TimedRobot {
 
   cs::VideoSink sinkCam = frc::CameraServer::GetInstance()->GetServer();
   cs::UsbCamera backCam = frc::CameraServer::GetInstance()->StartAutomaticCapture(1);
-   cs::UsbCamera frontCam = frc::CameraServer::GetInstance()->StartAutomaticCapture(0);
+  cs::UsbCamera frontCam = frc::CameraServer::GetInstance()->StartAutomaticCapture(0);
   
 
   double speedScale = 1;

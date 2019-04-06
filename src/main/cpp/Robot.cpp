@@ -21,10 +21,10 @@ void Robot::PlayerControl() {
     
     hatch.Set(Controller.GetRawButton(4));
     bucket.Set(Controller.GetRawButton(1));
-    
-    DiffDrive.ArcadeDrive(Controller.GetThrottle(), Controller.GetY());
-    
-    if(Controller.GetRawButtonPressed(/*WhatButton*/3)) {
+
+    DiffDrive.TankDrive(Controller.GetRawAxis(1), Controller.GetRawAxis(4));
+        
+    if(Controller.GetRawButtonPressed(3)) {
         cameraView = !cameraView;
         speedScale = speedScale * -1;
         sinkCam.SetSource(cameraView ? frontCam : backCam);
